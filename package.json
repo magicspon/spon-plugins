@@ -56,6 +56,7 @@
 	},
 	"peerDependencies": {
 		"@spon/core": "^2.0.0",
+		"@spon/domevents": "^1.0.2",
 		"raf-throttle": "^2.0.3"
 	},
 	"dependencies": {

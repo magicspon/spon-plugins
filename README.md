@@ -83,7 +83,7 @@ export default withPlugins(inview)(example)
 
 ```javascript
 import { withPlugins } from '@spon/core'
-import mutation from '@/plugins/mutation'
+import { mutation } from '@spon/plugins'
 
 /**
  * @function example
@@ -115,7 +115,7 @@ export default withPlugins(mutation)(example)
 
 ```javascript
 import { withPlugins } from '@spon/core'
-import resize from '@/plugins/resize'
+import { resize } from '@spon/plugins'
 
 /**
  * @function example
@@ -143,8 +143,7 @@ export default withPlugins(resize)(example)
 
 ```javascript
 import { withPlugins } from '@spon/core'
-import scroll from '@/plugins/scroll'
-
+import { scroll } from '@spon/plugins'
 /**
  * @function example
  * @param {Object} props
@@ -177,7 +176,7 @@ export default withPlugins(resize)(example)
 
 ```javascript
 import { withPlugins } from '@spon/core'
-import domEvents from '@/plugins/domEvents'
+import { domEvents } from '@spon/plugins'
 
 /**
  * @function example
