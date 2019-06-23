@@ -1,15 +1,15 @@
 {
-	"name": "@spon/core",
-	"version": "2.0.0",
+	"name": "@spon/plugins",
+	"version": "0.0.1",
 	"description": "spon",
 	"keywords": [],
-	"homepage": "https://github.com/magicspon/spon-core#readme",
+	"homepage": "https://github.com/magicspon/spon-plugins#readme",
 	"bugs": {
-		"url": "https://github.com/magicspon/spon-core/issues"
+		"url": "https://github.com/magicspon/spon-plugins/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/magicspon/spon-core.git"
+		"url": "git+https://github.com/magicspon/spon-plugins.git"
 	},
 	"license": "MIT",
 	"author": "magicspon@gmail.com",
