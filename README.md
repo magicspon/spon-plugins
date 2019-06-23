@@ -1,4 +1,11 @@
-## Available Plugins
+## Plugins
+
+Peer Dependency
+
+- @spon/core ^2.0.2
+- @spon/domevents ^1.0.2
+
+See [@spon/core](https://github.com/magicspon/spon-core/blob/master/README.md) for documentation
 
 ### Device (window resize)
 
