@@ -1,4 +1,6 @@
-## Plugins
+## Installation
+
+`npm install @spon/core @spon/domevents @spon/plugins --save` or `yarn add @spon/core @spon/domevents @spon/plugins --save`
 
 Peer Dependency
 
@@ -6,6 +8,8 @@ Peer Dependency
 - @spon/domevents ^1.0.2
 
 See [@spon/core](https://github.com/magicspon/spon-core/blob/master/README.md) for documentation
+
+## Plugins
 
 ### Device (window resize)
 
