@@ -3,7 +3,7 @@ export { default as inview } from './plugins/inview'
 export { default as mutation } from './plugins/mutation'
 export { default as resize } from './plugins/resize'
 export { default as scroll } from './plugins/scroll'
-import { registerPlugins } from '@spon/core'
+import { registerPlugin } from '@spon/core'
 
 export function withPlugins(...plugins) {
 	/**
@@ -21,7 +21,7 @@ export function withPlugins(...plugins) {
 						(acc, curr) => ({
 							...acc,
 							...curr({
-								register: registerPlugins(name),
+								register: registerPlugin(name),
 								...props
 							})
 						}),
