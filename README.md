@@ -3,8 +3,7 @@
 ### Device (window resize)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { device } from '@spon/plugins'
+import { withPlugins, device } from '@spon/plugins'
 
 /**
  * @function example
@@ -41,8 +40,7 @@ export default withPlugins(device)(example)
 ### Inview (IntersectionObserver)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { inview } from '@spon/plugins'
+import { withPlugins, inview } from '@spon/plugins'
 
 /**
  * @function example
@@ -82,8 +80,7 @@ export default withPlugins(inview)(example)
 ### Mutation (MutationObserver)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { mutation } from '@spon/plugins'
+import { withPlugins, mutation } from '@spon/plugins'
 
 /**
  * @function example
@@ -114,8 +111,7 @@ export default withPlugins(mutation)(example)
 ### Resize (resize observer)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { resize } from '@spon/plugins'
+import { withPlugins, resize } from '@spon/plugins'
 
 /**
  * @function example
@@ -142,8 +138,7 @@ export default withPlugins(resize)(example)
 ### Scroll (window scroll)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { scroll } from '@spon/plugins'
+import { withPlugins, scroll } from '@spon/plugins'
 /**
  * @function example
  * @param {Object} props
@@ -175,8 +170,7 @@ export default withPlugins(resize)(example)
 ### Dom Events (event delegation)
 
 ```javascript
-import { withPlugins } from '@spon/core'
-import { domEvents } from '@spon/plugins'
+import { withPlugins, domEvents } from '@spon/plugins'
 
 /**
  * @function example
@@ -223,8 +217,8 @@ export default withPlugins(domEvents)(example)
 ### All together
 
 ```javascript
-import { withPlugins } from '@spon/core'
 import {
+	withPlugins,
 	domEvents,
 	scroll,
 	inview,
