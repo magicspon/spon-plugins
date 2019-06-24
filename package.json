@@ -55,7 +55,7 @@
 		]
 	},
 	"peerDependencies": {
-		"@spon/core": "^2.0.1",
+		"@spon/core": "^2.1.0",
 		"@spon/domevents": "^1.0.2"
 	},
 	"dependencies": {
