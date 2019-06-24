@@ -1,6 +1,6 @@
 // @ts-check
 import throttle from 'raf-throttle'
-import { eventBus } from '@spon/core'
+import eventBus from './eventBus'
 
 /**
  * @module plugin/scroll

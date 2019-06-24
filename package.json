@@ -1,6 +1,6 @@
 {
 	"name": "@spon/plugins",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"description": "spon",
 	"keywords": [],
 	"homepage": "https://github.com/magicspon/spon-plugins#readme",
@@ -59,6 +59,7 @@
 		"@spon/domevents": "^1.0.2"
 	},
 	"dependencies": {
+		"mitt": "^1.1.3",
 		"raf-throttle": "^2.0.3"
 	},
 	"devDependencies": {
