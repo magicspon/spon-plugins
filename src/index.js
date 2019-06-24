@@ -4,6 +4,7 @@ export { default as inview } from './plugins/inview'
 export { default as mutation } from './plugins/mutation'
 export { default as resize } from './plugins/resize'
 export { default as scroll } from './plugins/scroll'
+export { default as eventBus } from './plugins/eventBus'
 import { registerPlugin } from '@spon/core'
 
 export function withPlugins(...plugins) {
