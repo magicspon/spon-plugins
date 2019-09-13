@@ -1,5 +1,6 @@
-// @ts-check
 import throttle from 'raf-throttle'
+
+// @ts-check
 
 /**
  * @module plugin/device
@@ -79,11 +80,13 @@ function removeWindowResizeEvent(fns) {
  */
 
 export default function device({ register, name }) {
-	const atCache = {}
+	let mql
+	let handle
 	let localList = []
 
 	register(() => {
 		removeWindowResizeEvent(localList)
+		if (mql) mql.removeListener(handle)
 	})
 
 	return {
@@ -131,30 +134,18 @@ export default function device({ register, name }) {
 					localList.push(key)
 				}
 
-				const findMatch = () => {
-					const match = window.matchMedia(query).matches
-					atCache[query] = atCache[query] || {
-						match,
-						called: false
-					}
-
-					if (match && !atCache[query].called && typeof on === 'function') {
-						on({ width: this.width, height: this.height })
-						atCache[query].called = true
-					} else if (
-						!match &&
-						atCache[query].called &&
-						typeof off === 'function'
-					) {
+				mql = window.matchMedia(query)
+				const watch = match => {
+					if (match) {
 						off({ width: this.width, height: this.height })
-
-						atCache[query].called = false
+					} else {
+						on({ width: this.width, height: this.height })
 					}
 				}
+				handle = e => watch(e.matches)
+				watch(mql.matches)
 
-				findMatch()
-
-				addWindowResizeEvent(findMatch, key)
+				mql.addListener(handle)
 
 				return this
 			},
