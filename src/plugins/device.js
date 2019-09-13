@@ -137,9 +137,9 @@ export default function device({ register, name }) {
 				mql = window.matchMedia(query)
 				const watch = match => {
 					if (match) {
-						off({ width: this.width, height: this.height })
-					} else {
 						on({ width: this.width, height: this.height })
+					} else {
+						off({ width: this.width, height: this.height })
 					}
 				}
 				handle = e => watch(e.matches)
