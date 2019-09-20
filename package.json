@@ -1,6 +1,6 @@
 {
 	"name": "@spon/plugins",
-	"version": "0.1.3",
+	"version": "2.0.0",
 	"description": "spon",
 	"keywords": [],
 	"homepage": "https://github.com/magicspon/spon-plugins#readme",
@@ -56,7 +56,7 @@
 	},
 	"peerDependencies": {
 		"@spon/core": "^2.1.1",
-		"@spon/domevents": "^1.0.2"
+		"@spon/domevents": "^2.0.0"
 	},
 	"dependencies": {
 		"mitt": "^1.1.3",
