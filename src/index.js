@@ -14,8 +14,8 @@ export function withPlugins(...plugins) {
 	 * @return {function}
 	 */
 	return module => {
-		return ({ name, ...props }) =>
-			module({
+		return ({ name, ...props }) => {
+			return module({
 				...props,
 				name,
 				plugins: {
@@ -24,6 +24,7 @@ export function withPlugins(...plugins) {
 							...acc,
 							...curr({
 								register: registerPlugin(name),
+								name,
 								...props
 							})
 						}),
@@ -31,5 +32,6 @@ export function withPlugins(...plugins) {
 					)
 				}
 			})
+		}
 	}
 }
