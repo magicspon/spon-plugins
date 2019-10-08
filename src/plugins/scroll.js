@@ -26,13 +26,15 @@ function addWindowScrollEvent(fn, key) {
 	}
 	if (!addWindowScrollEvent.isRunning) {
 		const handle = throttle(() => {
+			const direction = window.pageYOffset > yOffset ? 'down' : 'up'
+
 			const entries = Object.values(handles)
 			entries.forEach(() => {
-				eventBus.emit('@scroll/progress', { y: yOffset })
+				eventBus.emit('@scroll/progress', { y: yOffset, direction })
 			})
 
 			if (!isScrolling) {
-				eventBus.emit('@scroll/start', { y: yOffset })
+				eventBus.emit('@scroll/start', { y: yOffset, direction })
 			}
 
 			isScrolling = true
@@ -42,7 +44,7 @@ function addWindowScrollEvent(fn, key) {
 
 			timer = setTimeout(() => {
 				if (yOffset === window.pageYOffset) {
-					eventBus.emit('@scroll/stop', { y: yOffset })
+					eventBus.emit('@scroll/stop', { y: yOffset, direction })
 					clearTimeout(timer)
 					isScrolling = false
 				}
