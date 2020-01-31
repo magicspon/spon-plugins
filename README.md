@@ -32,7 +32,7 @@ function example({ node, plugins: { device } }) {
 		// called when the window resizes
 	})
 
-	device.at('(min-width="1024px")', {
+	device.at('(min-width:"1024px")', {
 		on: () => {
 			// called when the media query matches the current viewport
 		},
